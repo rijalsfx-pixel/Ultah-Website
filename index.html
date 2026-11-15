@@ -25,57 +25,46 @@
             border: none;
         }
 
-        .music-player {
-            position: fixed;
-            bottom: 15px;
-            right: 15px;
-            z-index: 9999;
-            background: white;
-            padding: 12px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px #e9a8c5;
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .music-player select,
-        .music-player button {
-            padding: 9px;
-            border: none;
-            border-radius: 8px;
-            background: #f28db5;
-            color: white;
-            cursor: pointer;
-        }
-		
-		.music-player {
+   .music-player {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 12px;
+    right: 12px;
     z-index: 9999;
     background: white;
-    padding: 12px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px #e9a8c5;
+    padding: 7px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #e9a8c5;
     display: flex;
-    gap: 8px;
+    gap: 5px;
     align-items: center;
     flex-wrap: wrap;
+    width: 230px;
+}
+
+.music-player select,
+.music-player button {
+    padding: 6px 7px;
+    font-size: 11px;
+    border: none;
+    border-radius: 7px;
+    background: #f28db5;
+    color: white;
+    cursor: pointer;
 }
 
 .music-progress {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     width: 100%;
-    font-size: 11px;
+    font-size: 10px;
     color: #bd668b;
 }
 
 #progress {
     flex: 1;
-    min-width: 80px;
+    min-width: 50px;
+    height: 5px;
     accent-color: #f28db5;
     cursor: pointer;
 }
