@@ -1,5 +1,5 @@
 
-const targetDate = new Date(2026, 10, 16, 00, 00, 0);
+const targetDate = new Date(2026, 10, 14, 00, 00, 0);
 
 const birthdayPassword = "081005";
 
