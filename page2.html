@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 💗</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Happy Birthday! 🎂</h1>
+        <p>Make a wish, sweetheart ♡</p>
+
+        <div class="cake">
+            <div class="candle">
+                <div id="flame" onclick="blowCandle()"></div>
+                <div class="wick"></div>
+            </div>
+
+            <div class="layer top"></div>
+            <div class="layer middle"></div>
+            <div class="layer bottom"></div>
+        </div>
+
+        <div id="instruction">
+            <h2>Tiup lilinnya! 💨</h2>
+            <p>Klik api lilinnya untuk meniupnya.</p>
+        </div>
+
+		<div id="wish" class="hidden">
+			<h2>My Birthday Wish For You 💌</h2>
+
+				<img src="assets/fotopage2.jpeg" class="wish-photo" alt="Our Photo">
+
+			<p id="wishText"></p>
+
+				<button onclick="relightCandle()">Hidupkan Lilin Lagi ♡</button>
+		</div>
+
+        
+		<div class="navigation">
+			<a href="login.html">← Kembali</a>
+			<a href="page3.html" class="next-page">Our Memories → ♡</a>
+		</div>
+		
+
+    </main>
+
+    <script src="page2.js"></script>
+</body>
+</html>

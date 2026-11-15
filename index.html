@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .music-player {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 9999;
+            background: white;
+            padding: 12px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #e9a8c5;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .music-player select,
+        .music-player button {
+            padding: 9px;
+            border: none;
+            border-radius: 8px;
+            background: #f28db5;
+            color: white;
+            cursor: pointer;
+        }
+		
+		.music-player {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #e9a8c5;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.music-progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    font-size: 11px;
+    color: #bd668b;
+}
+
+#progress {
+    flex: 1;
+    min-width: 80px;
+    accent-color: #f28db5;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+    <iframe src="login.html" name="content"></iframe>
+
+    <div class="music-player">
+    <select id="songSelect" onchange="changeSong()">
+        <option value="1">Shape Of My Heart 💗</option>
+        <option value="2">about You 💕</option>
+    </select>
+
+    <button onclick="playMusic()">▶</button>
+    <button onclick="pauseMusic()">Ⅱ</button>
+
+		<div class="music-progress">
+        <span id="currentTime">0:00</span>
+
+        <input type="range" id="progress" value="0" min="0" max="100">
+
+        <span id="duration">0:00</span>
+		</div>
+	</div>
+
+    <audio id="bgMusic" loop></audio>
+
+    <script>
+        
+const music = document.getElementById("bgMusic");
+const songSelect = document.getElementById("songSelect");
+const progress = document.getElementById("progress");
+
+const songs = {
+    1: "music/Shape_OfMy_Heart.mp3",
+    2: "music/about_you.mp3"
+};
+
+function formatTime(time) {
+    if (!Number.isFinite(time)) return "0:00";
+
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+
+    return minutes + ":" + String(seconds).padStart(2, "0");
+}
+
+function playMusic() {
+    const selectedSong = songs[songSelect.value];
+
+    if (music.getAttribute("src") !== selectedSong) {
+        music.src = selectedSong;
+    }
+
+    music.play().catch(() => {
+        alert("Musik belum bisa diputar!");
+    });
+}
+
+function pauseMusic() {
+    music.pause();
+}
+
+function changeSong() {
+    music.src = songs[songSelect.value];
+    progress.value = 0;
+    document.getElementById("currentTime").innerText = "0:00";
+    document.getElementById("duration").innerText = "0:00";
+    playMusic();
+}
+
+music.addEventListener("loadedmetadata", function () {
+    progress.max = music.duration;
+    document.getElementById("duration").innerText =
+        formatTime(music.duration);
+});
+
+music.addEventListener("timeupdate", function () {
+    progress.value = music.currentTime;
+    document.getElementById("currentTime").innerText =
+        formatTime(music.currentTime);
+});
+
+progress.addEventListener("input", function () {
+    music.currentTime = progress.value;
+});
+
+    </script>
+
+</body>
+</html>

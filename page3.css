@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe0ec, #fff0f5);
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.love-question {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(220, 100, 150, 0.15);
+}
+
+.heart-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #d65d91;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #987080;
+    margin-bottom: 20px;
+}
+
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    padding: 13px 18px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#yesButton {
+    background: #f28db5;
+}
+
+#yesButton:hover {
+    background: #e574a2;
+    transform: scale(1.05);
+}
+
+#noButton {
+    background: #b9a0c9;
+    transition: 0.2s;
+}
+
+#loveMessage {
+    color: #d65d91;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#nextPage {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 20px;
+    background: #f28db5;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+#nextPage:hover {
+    background: #e574a2;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    pointer-events: none;
+    animation: heartFloat 3s ease-out forwards;
+}
+
+@keyframes heartFloat {
+    to {
+        transform: translateY(-100vh) rotate(30deg);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="assets/foto1.jpeg" alt="Foto" class="photo">
+
+        <h1>Something Special</h1>
+		<h1>for You 💗</h1>
+        <p>Wait for your special day!</p>
+
+        <div id="countdown">
+            <div><span id="days">00</span><small>Hari</small></div>
+            <div><span id="hours">00</span><small>Jam</small></div>
+            <div><span id="minutes">00</span><small>Menit</small></div>
+            <div><span id="seconds">00</span><small>Detik</small></div>
+        </div>
+
+        <h3>Enter the password 💌</h3>
+
+        <div class="password-container">
+    <input type="password" id="password" placeholder="Masukkan password...">
+
+    <button type="button" id="togglePassword" onclick="togglePassword()">
+        <svg id="eyeIcon" viewBox="0 0 24 24">
+            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+</div>
+
+        <button id="nextButton">Next ♡</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

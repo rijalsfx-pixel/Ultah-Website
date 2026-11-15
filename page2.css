@@ -1,0 +1,234 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe0ed, #fff3f7);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bd668b;
+    padding: 25px 15px;
+}
+
+.container {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    box-shadow: 0 10px 30px #e9a8c5;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.cake {
+    margin: 140px auto 45px;
+    width: 240px;
+    position: relative;
+}
+
+.layer {
+    margin: auto;
+    border-radius: 12px 12px 18px 18px;
+    position: relative;
+    box-shadow: 0 5px 8px #e9a8c5;
+}
+
+.top {
+    width: 130px;
+    height: 45px;
+    background: #ffb4d0;
+}
+
+.middle {
+    width: 190px;
+    height: 55px;
+    background: #f58db7;
+    margin-top: -2px;
+}
+
+.bottom {
+    width: 240px;
+    height: 65px;
+    background: #ed75a7;
+    margin-top: -2px;
+}
+
+.candle {
+    position: absolute;
+    bottom: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 65px;
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        white 5px,
+        #ff9cbe 5px,
+        #ff9cbe 10px
+    );
+    border-radius: 5px;
+}
+
+.wick {
+    position: absolute;
+    width: 3px;
+    height: 9px;
+    background: #555;
+    top: -8px;
+    left: 6px;
+}
+
+#flame {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: #ffbd45;
+    border-radius: 50%;
+    top: -37px;
+    left: -2px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ffb52e;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+        transform: scale(1) rotate(-5deg);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.15) rotate(5deg);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#wish {
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+#wish h2 {
+    margin-bottom: 15px;
+}
+
+button {
+    background: #f28db5;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+a {
+    display: block;
+    color: #bd668b;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.navigation a {
+    color: #bd668b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation .next-page {
+    background: #f28db5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.navigation .next-page:hover {
+    background: #e574a2;
+    transform: translateY(-3px);
+}
+
+
+/* MINI LOVE QUESTION */
+
+.love-question {
+    margin-top: 35px;
+    padding: 22px 15px;
+    background: #fff0f6;
+    border: 2px dashed #f3a0c2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.love-question h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.love-question p {
+    font-size: 14px;
+}
+
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.answer-buttons button {
+    margin: 0;
+    padding: 12px 16px;
+    font-weight: bold;
+}
+
+#yesButton {
+    background: #f28db5;
+}
+
+#noButton {
+    background: #b9a0c9;
+    transition: 0.2s;
+}
+
+#loveMessage {
+    color: #d65d91;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.wish-photo {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 10px auto 20px;
+    display: block;
+    box-shadow: 0 5px 15px #e9a8c5;
+}

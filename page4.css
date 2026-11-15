@@ -1,0 +1,238 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe0ed, #fff3f7);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    color: #bd668b;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+    color: #c17b9b;
+}
+
+/* CAMERA BODY */
+
+.camera {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffb9d3, #f28db5);
+    border-radius: 30px;
+    border: 5px solid #f5a2c2;
+    box-shadow: 0 15px 30px #d99ab5;
+}
+
+/* CAMERA TOP */
+
+.camera-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.viewfinder {
+    width: 48px;
+    height: 25px;
+    background: #d96e9b;
+    border-radius: 7px;
+    border: 3px solid #ffe0ed;
+}
+
+.camera-brand {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.flash {
+    width: 25px;
+    height: 25px;
+    background: #fff2b8;
+    border-radius: 50%;
+    border: 3px solid #ffe0ed;
+}
+
+/* CAMERA SCREEN */
+
+.camera-screen {
+    background: #fff8fb;
+    padding: 10px;
+    border-radius: 15px;
+    border: 5px solid #d96e9b;
+}
+
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: bold;
+    color: #d96e9b;
+    padding: 5px;
+}
+
+.photo-area {
+    width: 100%;
+    height: 250px;
+    background: #f9dce8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.photo-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.photo-caption {
+    padding: 12px 5px 5px;
+    color: #bd668b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* CAMERA BOTTOM */
+
+.camera-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 5px;
+}
+
+.nav-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #ffe0ed;
+    background: #d96e9b;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-button:hover {
+    background: #bd5687;
+    transform: scale(1.1);
+}
+
+.nav-button:active {
+    transform: scale(0.9);
+}
+
+.lens {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #d96e9b;
+    border: 5px solid #ffe0ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lens-inner {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #87466a;
+    border: 5px solid #f8b7d0;
+}
+
+.camera-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.instruction {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #bd668b;
+    font-weight: bold;
+}
+
+.navigation .next-page {
+    background: #f28db5;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+}
+
+.navigation .next-page:hover {
+    background: #e574a2;
+}
+
+@media (max-width: 400px) {
+    .camera {
+        padding: 13px;
+    }
+
+    .photo-area {
+        height: 210px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    pointer-events: none;
+    animation: heartFloat 3s ease-out forwards;
+    z-index: 999;
+}
+
+@keyframes heartFloat {
+    to {
+        transform: translateY(-100vh) rotate(30deg);
+        opacity: 0;
+    }
+}

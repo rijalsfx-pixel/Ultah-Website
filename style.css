@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe0ed, #fff0f5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bd668b;
+}
+
+.container {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px #e9a8c5;
+}
+
+.photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffc1d9;
+    margin-bottom: 20px;
+	
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 12px 0;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+#countdown div {
+    background: #ffe5ef;
+    padding: 12px;
+    border-radius: 12px;
+    min-width: 65px;
+}
+
+#countdown span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#countdown small {
+    font-size: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #ffc1d9;
+    border-radius: 12px;
+    margin: 15px 0;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #f28db5;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    background: #d9b9c7;
+    cursor: not-allowed;
+}
+
+#message {
+    font-size: 14px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.password-container input {
+    width: 100%;
+    margin: 0;
+    padding: 13px 45px 13px 13px;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#eyeIcon {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: #bd668b;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
